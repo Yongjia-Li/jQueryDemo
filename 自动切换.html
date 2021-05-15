@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/zidongqiehuan.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+	
+	<style type="text/css">
+		.decoimg_b2{
+			display: block;
+		}
+		.imgbox{
+			width:1000px;
+			height:390px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="decoroll2" class="imgfocus">
+		<div id="decoimg_a2" class="imgbox">
+			<div class="decoimg_b2" ><a href="http://www.17sucai.com/"><img src="img/images/1.jpg" style="opacity: 1;"></a></div>
+			<div class="decoimg_b2" ><a href="http://www.17sucai.com/"><img src="img/images/2.jpg" style="opacity: 1;"></a></div>
+			<div class="decoimg_b2" ><a href="http://www.17sucai.com/"><img src="img/images/3.jpg" style="opacity: 1;"></a></div>
+			<div class="decoimg_b2" ><a href="http://www.17sucai.com/"><img src="img/images/4.jpg" style="opacity: 1;"></a></div>
+			<div class="decoimg_b2" ><a href="http://www.17sucai.com/"><img src="img/images/1.jpg" style="opacity: 1;"></a></div>
+		</div>
+		
+		<ul id="deconum2" class="num_a2">
+			<li><a href="javascript:void(0)" hidefocus="true" target="_self" class="current">杨幂</a></li>
+			<li><a href="javascript:void(0)" hidefocus="true" target="_self" class="">范冰冰</a></li>
+			<li><a href="javascript:void(0)" hidefocus="true" target="_self" class="">高圆圆</a></li>
+			<li><a href="javascript:void(0)" hidefocus="true" target="_self" class="">刘诗诗</a></li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+
+	setInterval(move,2000);
+	var i=0;
+	function move(){
+		$(".decoimg_b2:eq("+i+")").slideUp(1000,
+			function(){
+				$(".num_a2 a").removeClass("current");
+				$(".num_a2 a:eq("+(i+1)+")").addClass("current");
+				i=i+1;
+				if(i==$(".decoimg_b2").length-1){
+					$(".decoimg_b2").css("display","block");
+					$(".num_a2 a").removeClass("current");
+					$(".num_a2 a:eq(0)").addClass("current");
+					i=0;
+				}
+			});
+		
+	}
+</script>
+</html>

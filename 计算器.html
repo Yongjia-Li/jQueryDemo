@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>calculate </title>
+	<meta http-equiv = "Content-Type" content = "text/html;charaset = utf-8"/>
+	<style type="text/css">
+		body{
+			font:bolder 26px 楷体;
+			
+		}
+		#result{
+			text-align:right;
+		}
+		table,td{
+			border:1px solid #C0C0C0;			
+		}
+		td{
+			padding:10px;
+		}
+		button{
+			width:50px;
+			height:50px;
+		}		
+	</style>
+	<script type="text/javascript" src="js/jquery-1.8.3.js">
+		
+	</script>
+
+  </head>
+ <body>
+	<table>
+			<tr>
+				<td colspan="3" id="result">0</td>
+				<td><button type="button" value="C">C</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="1" >1</button></td>
+				<td><button type="button" value="2">2</button></td>
+				<td><button type="button" value="3">3</button></td>
+				<td><button type="button" value="+">+</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="4">4</button></td>
+				<td><button type="button" value="5">5</button></td>
+				<td><button type="button" value="6">6</button></td>
+				<td><button type="button" value="-">-</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="7">7</button></td>
+				<td><button type="button" value="8">8</button></td>
+				<td><button type="button" value="9">9</button></td>
+				<td><button type="button" value="*">*</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="0">0</button></td>
+				<td><button type="button" value=".">.</button></td>				
+				<td><button type="button" value="=">=</button></td>
+				<td><button type="button" value="/">/</button></td>
+			</tr>	
+				
+		</table>	
+ </body>
+ <!--<script type="text/javascript">
+// 	var $result = $("#result");
+ 	var str="";
+ 	//jquery对象通常情况下是不需要遍历了
+	$("button").click(function(){
+		if($(this).val()=="C"){
+			$("#result").html("0");
+			str="";
+		}
+		else if($(this).val()=="="){
+			calculate();
+		}
+		else{
+			showData($(this).val());
+			
+			
+		}
+	});
+ 	//字符内容拼接的过程
+	function showData(which){
+		if($("#result").html()=="0"){
+			$("#result").html(which);
+		}
+		else{
+			str=$("#result").html()+which;
+			$("#result").html(str);
+		}
+	    
+	}
+ 	//清楚运算区域内容
+		function calculate(){
+			var result = eval(str);
+			$("#result").html(result);
+		}
+ 	//运算
+
+ </script>
+ -->
+ <script type="text/javascript">
+ 	$("button").click(function(){
+ 		if($(this).val()=="C"){
+ 			$("#result").html("0");
+ 			str="";
+ 			
+ 		}else if($(this).val()=="="){
+ 			calculate();
+ 		}else{
+ 			showData($(this).val());
+ 			
+ 		}
+ 	});
+ 	var str = "";
+ 	function showData(which){
+ 		if($("#result").html()=="0"){
+ 			$("#result").html(which);
+ 		}
+ 		else{
+ 			str = $("#result").html()+which;
+ 			$("#result").html(str);
+ 		}
+ 	}
+ 	function calculate(){
+ 		var result = eval(str);
+ 		$("#result").html(result);
+ 	}
+ </script>
+</html>

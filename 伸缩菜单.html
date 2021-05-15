@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>index</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/animationstyle.css">
+	<link href="css/new_file.css" rel="stylesheet">
+	<script src="js/jquery-1.8.3.js"></script>
+
+</head>
+<body>
+  		<!--浮动-->
+  		<div class="dock">
+        <ul class="icons list-unstyled">
+            <li class="im">
+            	<i ></i><p class="p">网站建设咨询<br />在线沟通，请点我<button class="btn btn-primary btn-xs">在线咨询</button></p>
+            </li>
+            <li class="tel">
+            	<i></i><p class="p">建站咨询热线：<br />4006-123-011<br />售后电话：<br />010-53305670</p>
+            </li>
+            <li class="wechat">
+            	<i></i><p class="p"><img src="img/wechat_code.png" alt="扫描关注网站建设微信公众账号" /></p>
+            </li>
+            <li class="xinlang">
+            	<i></i><p class="p">果博思官方微博<br />在线产看，请点我<button class="btn btn-primary btn-xs">点击查看</button></p>
+            </li>
+        </ul>
+        <a class="switch"></a>
+        <a class="switchoff"></a>
+    </div>
+</body>
+<script type="text/javascript">
+	$(function(){
+//		$(".im").mouseover(function(){
+//			$(".im .p").animate({right:"50px"},300);
+//		});
+//		$(".tel").mouseover(function(){
+//			$(".tel .p").animate({right:"50px"},300);
+//		});
+//		$(".wechat").mouseover(function(){
+//			$(".wechat .p").animate({right:"50px"},300);
+//		});
+//		$(".xinlang").mouseover(function(){
+//			$(".xinlang .p").animate({right:"50px"},300);
+//		});
+//		$(".im").mouseout(function(){
+//			$(".im .p").animate({right:"-150px"},300);
+//		})
+//		$(".tel").mouseout(function(){
+//			$(".tel .p").animate({right:"-150px"},300);
+//		});
+//		$(".wechat").mouseout(function(){
+//			$(".wechat .p").animate({right:"-150px"},300);
+//		});
+//		$(".xinlang").mouseout(function(){
+//			$(".xinlang .p").animate({right:"-150px"},300);
+//		});
+		for(var i=0;i<$("li").length;i++){
+			$("li:eq("+i+")").mouseenter(function(){
+				$(this).children(".p").animate({right:"50px"},300);
+		
+			}).mouseleave(function(){
+					$(this).children(".p").animate({right:"-150px"},300);
+				})
+		}
+		
+});
+   		
+
+
+</script>
+</html>
